@@ -101,12 +101,14 @@ public abstract class AbstractContainerBox extends AbstractBox implements Contai
 
     @Override
     public void parse(ReadableByteChannel readableByteChannel, ByteBuffer header, long contentSize, BoxParser boxParser) throws IOException {
+    	parseDetails();
         super.parse(readableByteChannel, header, contentSize, boxParser);
         this.boxParser = boxParser;
     }
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseChildBoxes(content);
     }
 

@@ -111,6 +111,7 @@ public abstract class AbstractBox implements Box {
     }
 
     public void getBox(WritableByteChannel os) throws IOException {
+    	parseDetails();
         ByteBuffer bb = ByteBuffer.allocate(l2i(getSize()));
         getHeader(bb);
         if (content == null) {
@@ -135,7 +136,7 @@ public abstract class AbstractBox implements Box {
      * which is done
      */
     protected synchronized final void parseDetails() {
-        if ((content != null){
+        if (content != null) {
             ByteBuffer content = this.content;
             this.content = null;
             content.rewind();
@@ -164,6 +165,7 @@ public abstract class AbstractBox implements Box {
      * @return the box's size
      */
     public long getSize() {
+    	parseDetails();
         long size = (content == null ? getContentSize() : content.limit());
         size += (8 + // size|type
                 (size >= ((1L << 32) - 8) ? 8 : 0) + // 32bit - 8 byte size and type
@@ -195,6 +197,7 @@ public abstract class AbstractBox implements Box {
 
     @DoNotParseDetail
     public IsoFile getIsoFile() {
+    	parseDetails();
         return parent.getIsoFile();
     }
 

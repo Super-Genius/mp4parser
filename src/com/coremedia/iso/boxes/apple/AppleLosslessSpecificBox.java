@@ -122,6 +122,7 @@ public final class AppleLosslessSpecificBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         maxSamplePerFrame = IsoTypeReader.readUInt32(content);
         unknown1 = IsoTypeReader.readUInt8(content);

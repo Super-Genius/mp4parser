@@ -73,6 +73,7 @@ public class SampleAuxiliaryInformationSizesBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         if ((getFlags() & 1) == 1) {
             auxInfoType = IsoTypeReader.read4cc(content);

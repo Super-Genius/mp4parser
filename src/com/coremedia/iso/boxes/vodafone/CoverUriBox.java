@@ -48,6 +48,7 @@ public class CoverUriBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         coverUri = IsoTypeReader.readString(content);
     }

@@ -39,6 +39,7 @@ public class UnknownBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         data = content;
         content.position(content.position() + content.remaining());
     }

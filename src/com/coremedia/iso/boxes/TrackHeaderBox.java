@@ -106,6 +106,7 @@ public class TrackHeaderBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         if (getVersion() == 1) {
             creationTime = IsoTypeReader.readUInt64(content);

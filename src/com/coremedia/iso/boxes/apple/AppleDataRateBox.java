@@ -36,6 +36,7 @@ public class AppleDataRateBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         dataRate = IsoTypeReader.readUInt32(content);
     }

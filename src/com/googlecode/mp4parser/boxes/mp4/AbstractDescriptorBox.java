@@ -65,6 +65,7 @@ public class AbstractDescriptorBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         data = content.slice();
         content.position(content.position() + content.remaining());

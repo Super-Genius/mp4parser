@@ -50,6 +50,7 @@ public class RecordingYearBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         recordingYear = IsoTypeReader.readUInt16(content);
     }

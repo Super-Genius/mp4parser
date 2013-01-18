@@ -25,6 +25,7 @@ public final class AppleMeanBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         meaning = IsoTypeReader.readString(content, content.remaining());
     }

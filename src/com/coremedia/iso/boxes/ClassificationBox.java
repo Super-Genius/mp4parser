@@ -78,6 +78,7 @@ public class ClassificationBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         byte[] cE = new byte[4];
         content.get(cE);

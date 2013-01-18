@@ -67,6 +67,7 @@ public class SubSampleInformationBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
 
         entryCount = IsoTypeReader.readUInt32(content);

@@ -81,6 +81,7 @@ public class SampleAuxiliaryInformationOffsetsBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
 
         if ((getFlags() & 1) == 1) {

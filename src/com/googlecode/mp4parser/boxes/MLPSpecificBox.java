@@ -25,6 +25,7 @@ public class MLPSpecificBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         BitReaderBuffer brb = new BitReaderBuffer(content);
         format_info = brb.readBits(32);
         peak_data_rate = brb.readBits(15);

@@ -49,6 +49,7 @@ public abstract class AbstractTrackEncryptionBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         defaultAlgorithmId = IsoTypeReader.readUInt24(content);
         defaultIvSize = IsoTypeReader.readUInt8(content);

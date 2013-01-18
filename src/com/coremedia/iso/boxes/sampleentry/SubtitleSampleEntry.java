@@ -34,6 +34,7 @@ public class SubtitleSampleEntry extends SampleEntry {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         _parseReservedAndDataReferenceIndex(content);
         namespace = IsoTypeReader.readString(content);
         schemaLocation = IsoTypeReader.readString(content);

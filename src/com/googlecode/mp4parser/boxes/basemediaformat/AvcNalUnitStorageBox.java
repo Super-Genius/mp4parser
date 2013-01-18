@@ -58,6 +58,7 @@ public class AvcNalUnitStorageBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         data = new byte[content.remaining()];
     }
 

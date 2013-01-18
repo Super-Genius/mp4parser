@@ -60,6 +60,7 @@ public class HintMediaHeaderBox extends AbstractMediaHeaderBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         maxPduSize = IsoTypeReader.readUInt16(content);
         avgPduSize = IsoTypeReader.readUInt16(content);

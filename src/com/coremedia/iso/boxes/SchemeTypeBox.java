@@ -71,6 +71,7 @@ public class SchemeTypeBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         schemeType = IsoTypeReader.read4cc(content);
         schemeVersion = IsoTypeReader.readUInt32(content);

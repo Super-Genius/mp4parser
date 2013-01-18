@@ -26,6 +26,7 @@ public class ActionMessageFormat0SampleEntryBox extends SampleEntry {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         _parseReservedAndDataReferenceIndex(content);
         _parseChildBoxes(content);
     }

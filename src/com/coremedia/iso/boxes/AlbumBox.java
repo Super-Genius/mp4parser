@@ -77,6 +77,7 @@ public class AlbumBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         language = IsoTypeReader.readIso639(content);
         albumTitle = IsoTypeReader.readString(content);

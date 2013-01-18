@@ -40,6 +40,7 @@ public class CompositionShiftLeastGreatestAtom extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         compositionOffsetToDisplayOffsetShift = content.getInt();
         leastDisplayOffset = content.getInt();

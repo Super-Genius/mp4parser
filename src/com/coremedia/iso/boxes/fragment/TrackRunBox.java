@@ -240,6 +240,7 @@ public class TrackRunBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         long sampleCount = IsoTypeReader.readUInt32(content);
 

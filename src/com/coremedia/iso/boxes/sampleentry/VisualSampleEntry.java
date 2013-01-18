@@ -133,6 +133,7 @@ public class VisualSampleEntry extends SampleEntry implements ContainerBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         _parseReservedAndDataReferenceIndex(content);
         long tmp = IsoTypeReader.readUInt16(content);
         assert 0 == tmp : "reserved byte not 0";

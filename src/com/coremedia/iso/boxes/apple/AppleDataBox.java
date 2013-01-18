@@ -67,6 +67,7 @@ public final class AppleDataBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         fourBytes = new byte[4];
         content.get(fourBytes);

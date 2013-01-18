@@ -34,6 +34,7 @@ public class DataEntryUrlBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
     }
 

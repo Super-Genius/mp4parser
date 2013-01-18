@@ -40,6 +40,7 @@ public class SoundMediaHeaderBox extends AbstractMediaHeaderBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         balance = IsoTypeReader.readFixedPoint88(content);
         IsoTypeReader.readUInt16(content);

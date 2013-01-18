@@ -33,7 +33,6 @@ public class MovieCreator {
         IsoFile isoFile = new IsoFile(channel);
         Movie m = new Movie();
         MovieBox mbox = isoFile.getMovieBox();
-        mbox.parseDetails();
         List<TrackBox> trackBoxes = isoFile.getMovieBox().getBoxes(TrackBox.class);
         for (TrackBox trackBox : trackBoxes) {
             m.addTrack(new Mp4TrackImpl(trackBox));

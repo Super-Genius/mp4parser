@@ -13,6 +13,7 @@ public class GenericMediaHeaderBoxImpl extends AbstractMediaHeaderBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         this.data = content.slice();
         content.position(content.remaining() + content.position());

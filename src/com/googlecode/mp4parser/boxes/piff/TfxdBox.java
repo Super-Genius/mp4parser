@@ -52,6 +52,7 @@ public class TfxdBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
 
         if (getVersion() == 0x01) {

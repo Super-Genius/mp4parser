@@ -110,6 +110,7 @@ public class HandlerBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         shouldBeZeroButAppleWritesHereSomeValue = IsoTypeReader.readUInt32(content);
         handlerType = IsoTypeReader.read4cc(content);

@@ -32,6 +32,7 @@ public class XmlBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         xml = IsoTypeReader.readString(content, content.remaining());
     }

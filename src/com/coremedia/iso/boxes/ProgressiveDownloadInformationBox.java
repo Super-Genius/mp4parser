@@ -42,6 +42,7 @@ public class ProgressiveDownloadInformationBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         entries = new LinkedList<Entry>();
         while (content.remaining() >= 8) {

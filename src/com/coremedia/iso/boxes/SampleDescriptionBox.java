@@ -58,6 +58,7 @@ public class SampleDescriptionBox extends FullContainerBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         content.get(new byte[4]);
         parseChildBoxes(content);

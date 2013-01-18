@@ -54,6 +54,7 @@ public class OriginalFormatBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         dataFormat = IsoTypeReader.read4cc(content);
     }
 

@@ -67,6 +67,7 @@ public class SampleToGroupBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         groupingType = IsoTypeReader.readUInt32(content);
         if (getVersion() == 1) {

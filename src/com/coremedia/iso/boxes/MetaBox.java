@@ -63,6 +63,7 @@ public class MetaBox extends AbstractContainerBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         int pos = content.position();
         content.get(new byte[4]);
         String isHdlr = IsoTypeReader.read4cc(content);

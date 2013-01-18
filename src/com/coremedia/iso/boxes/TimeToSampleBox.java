@@ -57,6 +57,7 @@ public class TimeToSampleBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         int entryCount = l2i(IsoTypeReader.readUInt32(content));
         entries = new ArrayList<Entry>(entryCount);

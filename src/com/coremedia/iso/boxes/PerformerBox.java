@@ -67,6 +67,7 @@ public class PerformerBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         language = IsoTypeReader.readIso639(content);
         performer = IsoTypeReader.readString(content);

@@ -68,6 +68,7 @@ public class AmrSpecificBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         byte[] v = new byte[4];
         content.get(v);
         vendor = IsoFile.bytesToFourCC(v);

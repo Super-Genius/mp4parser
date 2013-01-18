@@ -62,6 +62,7 @@ public class BaseLocationBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         baseLocation = IsoTypeReader.readString(content);
         content.get(new byte[256 - Utf8.utf8StringLengthInBytes(baseLocation) - 1]);

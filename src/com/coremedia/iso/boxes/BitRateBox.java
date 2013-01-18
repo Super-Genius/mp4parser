@@ -53,6 +53,7 @@ public final class BitRateBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         bufferSizeDb = IsoTypeReader.readUInt32(content);
         maxBitrate = IsoTypeReader.readUInt32(content);
         avgBitrate = IsoTypeReader.readUInt32(content);

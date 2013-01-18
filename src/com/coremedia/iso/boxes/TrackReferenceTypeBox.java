@@ -42,6 +42,7 @@ public class TrackReferenceTypeBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         int count = (int) (content.remaining() / 4);
         trackIds = new long[count];
         for (int i = 0; i < count; i++) {

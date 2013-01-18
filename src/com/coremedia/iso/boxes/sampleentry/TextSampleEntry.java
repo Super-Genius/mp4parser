@@ -56,6 +56,7 @@ public class TextSampleEntry extends SampleEntry {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         _parseReservedAndDataReferenceIndex(content);
         displayFlags = IsoTypeReader.readUInt32(content);
         horizontalJustification = IsoTypeReader.readUInt8(content);

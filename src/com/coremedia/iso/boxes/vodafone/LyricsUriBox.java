@@ -49,6 +49,7 @@ public class LyricsUriBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         lyricsUri = IsoTypeReader.readString(content);
     }

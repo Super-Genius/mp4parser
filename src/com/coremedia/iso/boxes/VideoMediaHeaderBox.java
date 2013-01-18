@@ -50,6 +50,7 @@ public class VideoMediaHeaderBox extends AbstractMediaHeaderBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         graphicsmode = IsoTypeReader.readUInt16(content);
         opcolor = new int[3];

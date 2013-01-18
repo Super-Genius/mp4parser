@@ -52,6 +52,7 @@ public abstract class AbstractAppleMetaDataBox extends AbstractBox implements Co
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         long dataBoxSize = IsoTypeReader.readUInt32(content);
         String thisShouldBeData = IsoTypeReader.read4cc(content);
         assert "data".equals(thisShouldBeData);

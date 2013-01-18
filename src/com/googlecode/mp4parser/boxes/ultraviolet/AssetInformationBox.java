@@ -50,6 +50,7 @@ public class AssetInformationBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         profileVersion = IsoTypeReader.readString(content, 4);
         apid = IsoTypeReader.readString(content);

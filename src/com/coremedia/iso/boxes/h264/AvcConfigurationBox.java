@@ -151,6 +151,7 @@ public final class AvcConfigurationBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         configurationVersion = IsoTypeReader.readUInt8(content);
         avcProfileIndicaation = IsoTypeReader.readUInt8(content);
         profileCompatibility = IsoTypeReader.readUInt8(content);

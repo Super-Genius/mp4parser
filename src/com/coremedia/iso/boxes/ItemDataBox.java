@@ -32,6 +32,7 @@ public class ItemDataBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         data = content.slice();
         content.position(content.position() + content.remaining());
     }

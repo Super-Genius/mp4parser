@@ -82,6 +82,7 @@ public class TrackFragmentRandomAccessBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         trackId = IsoTypeReader.readUInt32(content);
         long temp = IsoTypeReader.readUInt32(content);

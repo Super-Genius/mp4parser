@@ -16,6 +16,7 @@ public class SubtitleMediaHeaderBox extends AbstractMediaHeaderBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
     }
 

@@ -34,6 +34,7 @@ public class EC3SpecificBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         BitReaderBuffer brb = new BitReaderBuffer(content);
         dataRate = brb.readBits(13);
         numIndSub = brb.readBits(3) + 1;

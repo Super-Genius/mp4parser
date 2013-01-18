@@ -86,6 +86,7 @@ public class SampleSizeBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         sampleSize = IsoTypeReader.readUInt32(content);
         sampleCount = l2i(IsoTypeReader.readUInt32(content));

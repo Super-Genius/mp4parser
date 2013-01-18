@@ -64,6 +64,7 @@ public class CopyrightBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         language = IsoTypeReader.readIso639(content);
         copyright = IsoTypeReader.readString(content);

@@ -34,6 +34,7 @@ public abstract class AbstractSampleEncryptionBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         if ((getFlags() & 0x1) > 0) {
             algorithmId = IsoTypeReader.readUInt24(content);
@@ -165,6 +166,7 @@ public abstract class AbstractSampleEncryptionBox extends AbstractFullBox {
 
     @Override
     public void getBox(WritableByteChannel os) throws IOException {
+    	parseDetails();
         super.getBox(os);
     }
 

@@ -45,6 +45,7 @@ public class DTSSpecificBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         DTSSamplingFrequency = IsoTypeReader.readUInt32(content);
         maxBitRate = IsoTypeReader.readUInt32(content);
         avgBitRate = IsoTypeReader.readUInt32(content);

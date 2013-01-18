@@ -24,6 +24,7 @@ public class TimeCodeBox extends SampleEntry {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         _parseReservedAndDataReferenceIndex(content);
         data = new byte[18];
         content.get(data);

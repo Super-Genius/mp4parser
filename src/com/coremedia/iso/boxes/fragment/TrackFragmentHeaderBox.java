@@ -94,6 +94,7 @@ public class TrackFragmentHeaderBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         trackId = IsoTypeReader.readUInt32(content);
         if ((getFlags() & 0x1) == 1) { //baseDataOffsetPresent

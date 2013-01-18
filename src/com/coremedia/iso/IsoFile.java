@@ -65,6 +65,7 @@ public class IsoFile extends AbstractContainerBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         // there are no details to parse we should be just file
     }
 
@@ -141,6 +142,7 @@ public class IsoFile extends AbstractContainerBox {
 
     @Override
     public long getSize() {
+    	parseDetails();
         long size = 0;
         for (Box box : boxes) {
             size += box.getSize();
@@ -150,6 +152,7 @@ public class IsoFile extends AbstractContainerBox {
 
     @Override
     public IsoFile getIsoFile() {
+    	parseDetails();
         return this;
     }
 
@@ -171,6 +174,7 @@ public class IsoFile extends AbstractContainerBox {
     }
 
     public void getBox(WritableByteChannel os) throws IOException {
+    	parseDetails();
         for (Box box : boxes) {
 
             if (os instanceof FileChannel) {

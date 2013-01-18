@@ -26,6 +26,7 @@ public class AC3SpecificBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         BitReaderBuffer brb = new BitReaderBuffer(content);
         fscod = brb.readBits(2);
         bsid = brb.readBits(5);

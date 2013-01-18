@@ -111,6 +111,7 @@ public class SampleDependencyTypeBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         while (content.remaining() > 0) {
             entries.add(new Entry(IsoTypeReader.readUInt8(content)));

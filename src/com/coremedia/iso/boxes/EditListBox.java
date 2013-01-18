@@ -83,6 +83,7 @@ public class EditListBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         int entryCount = l2i(IsoTypeReader.readUInt32(content));
         entries = new LinkedList<Entry>();

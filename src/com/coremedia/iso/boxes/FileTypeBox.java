@@ -58,6 +58,7 @@ public class FileTypeBox extends AbstractBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         majorBrand = IsoTypeReader.read4cc(content);
         minorVersion = IsoTypeReader.readUInt32(content);
         int compatibleBrandsCount = content.remaining() / 4;

@@ -45,6 +45,7 @@ public class ItemProtectionBox extends FullContainerBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         IsoTypeReader.readUInt16(content);
         parseChildBoxes(content);

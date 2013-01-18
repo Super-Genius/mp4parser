@@ -165,6 +165,7 @@ public class AudioSampleEntry extends SampleEntry implements ContainerBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         _parseReservedAndDataReferenceIndex(content);    //parses the six reserved bytes and dataReferenceIndex
         // 8 bytes already parsed
         //reserved bits - used by qt

@@ -60,6 +60,7 @@ public class TrackExtendsBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         trackId = IsoTypeReader.readUInt32(content);
         defaultSampleDescriptionIndex = IsoTypeReader.readUInt32(content);

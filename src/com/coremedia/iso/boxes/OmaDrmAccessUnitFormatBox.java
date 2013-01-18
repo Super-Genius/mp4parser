@@ -69,6 +69,7 @@ public final class OmaDrmAccessUnitFormatBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         allBits = (byte) IsoTypeReader.readUInt8(content);
         selectiveEncryption = (allBits & 0x80) == 0x80;

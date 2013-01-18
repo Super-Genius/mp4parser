@@ -96,6 +96,7 @@ public class LocationInformationBox extends AbstractFullBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         language = IsoTypeReader.readIso639(content);
         name = IsoTypeReader.readString(content);

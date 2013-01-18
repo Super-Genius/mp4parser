@@ -49,6 +49,7 @@ public class DataReferenceBox extends FullContainerBox {
 
     @Override
     public void _parseDetails(ByteBuffer content) {
+    	parseDetails();
         parseVersionAndFlags(content);
         content.get(new byte[4]); // basically a skip of 4 bytes signaling the number of child boxes
         parseChildBoxes(content);
